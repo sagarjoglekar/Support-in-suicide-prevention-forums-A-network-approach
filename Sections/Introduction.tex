@@ -23,8 +23,7 @@ Most previous studies have aimed at studying the \emph{content} of posts and the
 To our knowledge, there are no studies that have specifically focused on modeling the supportive \emph{nature} of online fora related to mental health. This work takes a macroscopic perspective, to quantitatively characterise and model the nature of supportive conversations. SuicideWatch is particularly interesting because of its purpose to offer peer support to people with suicidal thoughts, and also because of the complexity of this clinical construct.
 
 Our aims in this study are to 
-\begin{itemize}
-    \item Build computational methods to abstract conversations on these forums in the form of User graphs and Reply graphs. 
+\begin{itemize} 
     \item Understand similarities and differences between a Suicide watch conversation and a generic conversation using these abstraction. 
     \item Study global properties of these conversations in comparison with control conversations. 
     \item User network metrics to reason about global differences in terms of local interactions between users. 
@@ -32,7 +31,7 @@ Our aims in this study are to
  
 % 1) understand the nature of the posts and replies that are posted in this forum from a clinical perspective, and 2) study the supportive nature of the forum on a global level. We do this by 1) performing a qualitative analysis of a random subset of posts [this needs to be explained somehow], 2) Develop a method of representing conversations on these forums in a computationally measurable format and 3) operationalizing a theory of community support\cite{minkler2005improving} in a data-driven approach using network topology and content feature approaches, and comparing these against a control dataset.
     
-To model the network topology in an online community, we represent conversations in a forum using graph-based abstractions (users and replies). 
+To model the network topology in an online community, we represent conversations in a forum using graph-based abstractions (users and replies) as described in Section \ref{Sec:Abstractions}. 
 To measure global structure of these conversations, we user network topological metrics such as centrality: which measures importance of nodes in a network in terms of relaying information, branching factor: which measures how a conversation fans our over time, return distance: which measures how soon do users return back to the conversation and symmetric edges: which measures reciprocity of users in a conversation. To measure measure local interactions, we measure inter response times: which measure urgency of response to a message, semantic alignment between messages and local interaction motifs known as Triadic motifs : which gives an idea about how distinctive are interactions between subgroups of users. 
 
 %We propose a set of metrics for network topology analysis that capture the supportive nature of online communities like SuicideWatch: thread engagement, response times, symmetric responses, centralities, topical alignment, branching factors, return distance and \sj{local user interaction structure \cite{holland1976local}}. \st{triadic motifs [not sure if we should mention these here - if we do, maybe they need brief introductions/explanations or pointers to the details in the methods section]. This method provides a means to systematically analyze these types of online communities. [We need a sentence on the main contributions too here.]}
