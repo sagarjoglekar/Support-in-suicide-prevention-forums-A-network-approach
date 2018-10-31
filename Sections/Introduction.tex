@@ -1,0 +1,65 @@
+\section{Introduction}
+
+The world has become more connected over the past decades thanks to the networked nature of the technologies of the day. It is seldom possible to spend a whole day without single interaction on the Internet. The Internet gives platforms where we can not only connect with our social counterparts but also exchange ideas and express opinions. These new mediums have become so ubiquitous, that some research suggests that they might be affecting our broader psychological state \cite{d20122}. But on the positive side, studies have also proposed different ways in which this medium could be used for measuring and intervening in the matters of mental health\cite{DeChoudhury2016,DeChoudhury2014}.
+Online communities, or fora, offer a platform for users to directly interact with each other. Reddit\footnote{\url{http://reddit.com/}} is one of the largest online communities which contains a number of sub-communities (so called \emph{subreddits}) that can be about almost anything. On this platform, several subreddits are specifically tailored to mental health-related topics, such as \emph{depression}, \emph{anxiety} or \emph{alcoholism}. These fora offer a unique opportunity to study the way people describe or discuss their problems in their own voice.
+
+One of the most challenging, and devastating, global mental health concerns is suicide. Suicidal behaviour includes any thoughts, plans or acts someone makes towards ending their life. In health care services, preventing death by suicide is a priority, but accurately predicting whether or not someone is at risk of committing suicide is difficult. Moreover, a large proportion of deaths by suicide occur in populations that have never been seen by health service providers.\remSVi{Rina: you could probably improve the section above...}
+
+Several online platforms are used for expressing suicidal thoughts and reaching out for support. On Reddit, the subreddit \emph{SuicideWatch} currently\footnote{As of 27th June 2018} has almost 94k subscribers, and is a moderated forum that is intended to offer peer support for people at risk of, or are worried about others', suicidal behaviour. The moderators take the message of peer support seriously, and are governed by guidelines that prohibits false promises, abuse, tough love and other clinically frowned upon methods of conversations\footnote{\url{http://www.bbc.co.uk/newsbeat/article/35577626/social-media-and-suicide-what-its-like-being-a-moderator-on-rsuicidewatch} }
+
+As such it is valuable to understand what characteristics supportive communities like SuicideWatch have, and in what aspects such communities are similar or dis-similar from other casual subreddit conversations. 
+
+%\st{Also given that several of these subreddits that deal with mental health have been studied and proven to help\footnote{https://gizmodo.com/reddit-is-helping-some-people-deal-with-their-mental-he-1825364592}} \cite{Kavuluru:2016:CHC:2975167.2975170,park2018examining}, \st{it is important to dissect and characterize these online conversation threads to understand major differences in terms of structure.}
+%\remSVi{Another relevant paper mentioned in the gizmodo piece: \cite{info:doi/10.2196/jmir.8219}}
+Recent studies have shown promising results in modeling and measuring signals and patterns in reddit communities related to mental health. For instance, statistical relations of mental health and depression communities with suicidal ideation have been studied \cite{DeChoudhury2014,DeChoudhury2016}. The authors explored linguistic and social characteristics that evaluate user's propensity to suicidal ideation. Approaches to classify reddit posts as related to certain mental health conditions have also been successfully developed, showing that there are certain characteristics specific to mental health-related topics in posts that can be automatically captured\cite{gkotsis2017characterisation}. Furthermore, in a study focused on reddit posts related to anxiety, depression and post-traumatic stress disorder, the authors show that these online communities exhibit themes of supportive nature, e.g. gratitude for receiving emotional support\cite{park2018examining}. Positive effects in participation in such fora have also been shown by improvements in members' written communication\cite{info:doi/10.2196/jmir.8219}. The supportive nature of comments in the SuicideWatch forum has also been studied by automatic identification and classification of helpful comments with promising results\cite{Kavuluru:2016:CHC:2975167.2975170}.
+
+
+%\st{One aspect of this is measuring} \sv{measure} signals and patterns in the data that are predictors of certain distresses. A good example\cite{DeChoudhury2014,DeChoudhury2016} looked at statistical relations of mental health and depression community with suicidal ideation. In their work, the authors explore linguistic and social characteristics that evaluate user's propensity to suicidal ideation. 
+%Another crucial and related work was carried out by \cite{gkotsis2017characterisation}, where they characterized mental health related posts on sub-reddit, and developed models to accurately predict type of condition based of informed language models.
+
+Most previous studies have aimed at studying the \emph{content} of posts and their characteristics in relation to other posts. One important aspect of online communities is its supportive \emph{function} --- users turn to these platforms not only to express their thoughts and concerns, but also to receive support from the community. 
+\remSVi{More references to be added in the introduction. Also, we need to add something about the Online disinhibition effect somehow.}
+
+To our knowledge, there are no studies that have specifically focused on modeling the supportive \emph{nature} of online fora related to mental health. This work takes a macroscopic perspective, to quantitatively characterise and model the nature of supportive conversations. SuicideWatch is particularly interesting because of its purpose to offer peer support to people with suicidal thoughts, and also because of the complexity of this clinical construct.
+
+Our aims in this study are to 
+\begin{itemize}
+    \item Build computational methods to abstract conversations on these forums in the form of User graphs and Reply graphs. 
+    \item Understand similarities and differences between a Suicide watch conversation and a generic conversation using these abstraction. 
+    \item Study global properties of these conversations in comparison with control conversations. 
+    \item User network metrics to reason about global differences in terms of local interactions between users. 
+\end{itemize}
+ 
+% 1) understand the nature of the posts and replies that are posted in this forum from a clinical perspective, and 2) study the supportive nature of the forum on a global level. We do this by 1) performing a qualitative analysis of a random subset of posts [this needs to be explained somehow], 2) Develop a method of representing conversations on these forums in a computationally measurable format and 3) operationalizing a theory of community support\cite{minkler2005improving} in a data-driven approach using network topology and content feature approaches, and comparing these against a control dataset.
+    
+To model the network topology in an online community, we represent conversations in a forum using graph-based abstractions (users and replies). 
+To measure global structure of these conversations, we user network topological metrics such as centrality: which measures importance of nodes in a network in terms of relaying information, branching factor: which measures how a conversation fans our over time, return distance: which measures how soon do users return back to the conversation and symmetric edges: which measures reciprocity of users in a conversation. To measure measure local interactions, we measure inter response times: which measure urgency of response to a message, semantic alignment between messages and local interaction motifs known as Triadic motifs : which gives an idea about how distinctive are interactions between subgroups of users. 
+
+%We propose a set of metrics for network topology analysis that capture the supportive nature of online communities like SuicideWatch: thread engagement, response times, symmetric responses, centralities, topical alignment, branching factors, return distance and \sj{local user interaction structure \cite{holland1976local}}. \st{triadic motifs [not sure if we should mention these here - if we do, maybe they need brief introductions/explanations or pointers to the details in the methods section]. This method provides a means to systematically analyze these types of online communities. [We need a sentence on the main contributions too here.]}
+
+
+
+
+\begin{table}
+	\resizebox{0.5\linewidth}{!}{
+		\begin{tabular}{l|p{8cm}}
+			\textbf{Terminology} & \textbf{stands for}\\
+			$RP$   & Root post which begins a new thread on a subreddit \\
+			$OP$  & Original poster who posts the Root post for a thread \\
+			$SW$ & The suicide watch Subreddit \\
+			$FP$  & Front page of Reddit. \\
+		\end{tabular}}
+	\caption{Notations and Terms.}
+    \label{notations}
+\end{table}
+
+% \st{In this work we measure the phenomenon of social support in online communities that deal with suicidal thoughts and suicidal expressions. We do this by a data driven study of Suicide Watch sub-reddit and baseline it using a large random collection of reddit threads from the Front page of the Reddit website. We in the process of measuring, try to ope rationalize a well establish theory on off-line support from literature \cite{minkler2005improving} using network topology and content features and show that the measures developed off-line hold true for this particular supportive community}
+
+
+%% SV: to add: condense the punchline and the main methods and contributions. 5 main steps - network structure would be the typical network analysis which actually doesn't show anything in these datasets, but with the subsequent methods proposed here, significant differences are shown, and they provide a means to systematically analyze these types of communities
+
+% This work takes a macroscopic perspective, it shows the nature of supportive conversations. This could be used to find conversations that seem to be supportive and this could be used to study the content of these to better understand - also to automatically create datasets for - precurated - for analysis and annotation of content. How is this useful for someone like Rina? Could this (motifs) be used to inform the design of therapy groups? (Put in discussion) There are certain motif structures that are important in supportive conversation - would this translate to online conversations? 
+% this is a way to elicit something that has been done qualitatively previously
+% group support online
+% follow-up studies: are specific motif structures particularly supportive? 
+% real-time graphical display? evolving communication structure that could be used by moderators? how does the moderation work today?

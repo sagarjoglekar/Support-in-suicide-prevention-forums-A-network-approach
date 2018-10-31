@@ -1,0 +1,78 @@
+\def\year{2018}\relax
+%File: formatting-instruction.tex
+\documentclass[fleqn,10pt]{wlscirep} %DO NOT CHANGE THIS
+% \usepackage{aaai18}  %Required
+\usepackage{times}  %Required
+\usepackage{helvet}  %Required
+\usepackage{courier}  %Required
+\usepackage{url}  %Required
+\usepackage{graphicx}  %Required
+% \frenchspacing  %Required
+% \setlength{\pdfpagewidth}{8.5in}  %Required
+% \setlength{\pdfpageheight}{11in}  %Required
+
+\usepackage{xcolor}
+%\usepackage{amsmath}
+%\usepackage{verbatim}
+%\usepackage{graphics}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{multirow}
+\usepackage{url}
+%%decrease spacing 
+\usepackage{times}
+\usepackage{comment}
+%
+%\newtheorem{thm}{Theorem}
+%\newtheorem{corr}{Corollary}
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{pty}{Property}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\yellow}[1]{\textcolor{yellow}{#1}}
+\newcommand{\sj}[1]{\green{#1}}
+\newcommand{\ns}[1]{\red{#1}}
+\newcommand{\sv}[1]{\blue{#1}}
+\newcommand{\rd}[1]{\yellow{#1}}
+
+%% Added to strikeout text /Sumithra
+\usepackage{soul}
+
+%% Added for notes inside the text
+\usepackage{todonotes}
+\newcommand{\remSV}[1]{\todo[color=lightgray]{{\scriptsize[SV] #1\par}}}
+\newcommand{\remSVi}[1]{\todo[color=lightgray,inline]{{\scriptsize[SV] #1\par}}}
+
+
+%PDF Info Is Required:
+%\pdfinfo{
+%	/Title (2018 Formatting Instructions for Authors Using LaTeX)
+%	/Author (AAAI Press Staff)}
+\setcounter{secnumdepth}{0}  
+	% The file aaai.sty is the style file for AAAI Press 
+	% proceedings, working notes, and technical reports.
+	%
+	
+\title{Anatomy of support: Measuring properties of on-line supportive conversations}
+
+\begin{abstract}
+The boom in Internet connectivity has allowed several positive use cases including potential to support people in need and distress over the Internet forums. These support forums have been studied in several aspects from depression, chronic illnesses and general fitness \cite{}. The idea of quantifying these on- line support processes to learn from in off-line cases has been discussed in literature before. In this paper we try to dissect the dynamics through which distress calls are met in terms of conversational interactions and how they differ from general non-supportive ones. We do so by first formalizing a graph based abstraction of nested conversations, considering the topical nature of replies to a message. We then relate different metrics that differentiate these conversations to a popular theory of community support. We also look at motif structures which emerge in these supportive conversations and evaluate the predictive importance of all these features. We specifically concentrate on conversations pertaining to expression of suicidal thoughts by looking at Suicide watch subreddit. We experimentally show that supportive conversations are measurably different from generic ones through the lens of these aforementioned features and draw parallels to well established off-line support literature. We also qualitatively analyze these conversations to understand \sj{Rina could you add some stuff regarding qualitative analysis?}
+The proposed framework could have positive implications in detection of supportive on-line conversations. 
+\end{abstract}
+\begin{document}
+\flushbottom
+\maketitle\thispagestyle{empty}
+
+
+\input{Sections/Introduction}
+\input{Sections/Results}
+\input{Sections/Discussion}
+\input{Sections/Methods}
+\input{Sections/Appendix}
+
+
+\bibliography{replyGraphs}
+\end{document}
