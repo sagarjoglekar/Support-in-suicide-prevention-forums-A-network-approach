@@ -80,7 +80,7 @@ In this method, we represent each thread as a directed graph $G\{V,E,W\}$ where 
 
 
 \subsection{Macro and local metrics}
-The abstractions are used to extract certain structural metrics from the conversation threads. These metrics are then used to validate structural differences in supportive conversations 
+The abstractions are used to extract certain structural metrics from the conversation threads. These metrics are then used to validate structural differences between supportive conversations and generic casual conversations from out baseline set.
 
 
 \subsubsection{Centrality}
@@ -115,9 +115,8 @@ We calculate the values of $d_{avg}$ for both $OP$ and other users in the thread
 
 
 \subsubsection{Semantic similarity}
-\label{Topic}
-We use a popular word embedding method called \textit{Word2Vec} \cite{mikolov2013distributed} which learns representations of a set of words from a corpus of text, which in our case is the text from Suicide Watch and baseline fora. These representations can be used to extract text embedding vectors for each post which belong to a $N$ dimensional space $R^N$
-
+\label{Sec:Semantic}
+We use a popular word embedding method called \textit{Word2Vec} \cite{mikolov2013distributed} which learns representations of a set of words from a corpus of text, which in our case is the text from Suicide Watch and baseline fora. These representations can be used to extract text embedding vectors for each post which belong to a $N$ dimensional space $R^N$. These vectors are tested for their alignment using cosine distance in $R^N$, which corresponds to semantic similarity in the textual space. This method is quite popular and used in community based question answering\cite{mihaylov2016semanticz}, Medical semantic similarity \cite{de2014medical} and other medical informatics applications\cite{zhu2017semantic}.
 
 
 
