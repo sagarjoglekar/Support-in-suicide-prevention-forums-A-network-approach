@@ -62,14 +62,14 @@ We measure semantic alignment based on word embeddings of the source post and th
 
 
 \subsubsection{How branched do conversations become?}
-Branching in a conversation thread could be either a sign of digression or a sign interestingness resulting in more people joining in. To measure this phenomena, use the reply graphs, which resemble a n-ary directed acyclic graph, to evaluate the branching factor. 
+Branching in a conversation thread could be either a sign of digression or a sign interestingness resulting in more people joining in. To measure this phenomena, use the reply graphs, which resemble a n-ary directed acyclic graph, to evaluate the branching factor. By using the method described in Section \ref{Sec:Branching}, we found that Suicide watch threads, tend to branch in a much less as compared to our baseline conversations. This implies that suicide watch threads tend to remain a one-on-one conversation with the $OP$ albeit many such dialogues may emerge, and hence that explains the high centrality of the $OP$ in all interaction graphs. If the helpers on a thread seldom interact with each other, the corresponding interaction graph will have the $OP$ as the most central node.
 
-\subsubsection{How often do users come back to respond ? }
-
-
+%\subsubsection{How often do users come back to respond ? }
+%This measurement is important as it helps us quantify the average attention of a participant in a conversation, if the participant chooses to remain engaged. 
 
 \subsection{Patterns in local interactions}
-To answer this question, we use a method more commonly known as network motif analysis to understand triads, or groups of three nodes, and the patterns of edges that exist between them. 
+It is often a useful tool to express large interaction graphs, as the sum of local interactions between two or three nodes at a time. Such analysis is quite useful in expressing local structures in the graphs. 
+For this reason we use a method more commonly known as network motif analysis (described in Section \ref{Sec:motif}) to understand triads, or groups of three nodes, and the patterns of edges that exist between them. 
 
 \begin{figure}[!ht]
 	\centering

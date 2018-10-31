@@ -102,6 +102,7 @@ $$
 To understand how Suicide watch subreddit users responds to the $OP$ and each other, compared to other sub-reddit threads on the frontpage, we calculate differences between the posting times between consecutive messages in a reply graph. We compute the median response times per thread, for $OP$'s posts and for all other posts. 
 
 \subsubsection{Branching Factor}
+\label{Sec:Branching}
 Branching factor is a quantity that reflects the fan out of a conversation as it evolves.
 To measure this phenomena, we use the reply graphs, which resemble a n-ary directed acyclic graph, to evaluate the branching factor. The branching factor is formally described as 
 $$\tau = \frac{1}{|D|} \sum_{d \in D}^{} \frac{1}{|N_d|} \sum_{n\in N_d}^{} \textit{InDeg}(n)$$
@@ -121,6 +122,7 @@ We use a popular word embedding method called \textit{Word2Vec} \cite{mikolov201
 
 
 \subsection{Structural metrics}
+\label{Sec:motif}
 \remSVi{This probably needs to be briefly introduced/explained earlier in the manuscript?}
 To understand relation of local structure in conversations with its nature, we compare the quantity called \textsl{motif occurrence ratio}. After calculating motif census across the dataset\cite{Batagelj2001}, we select progressive subsets of graphs from both datasets with nodes $n \in [3 , 40]$. \remSVi{What is the motivation behind the 3-40 thresholds?} We test each graph for the frequency of occurance of the 16 possible triadic motifs as shown in Figure\ref{fig:motifs}. For each of these node values we get a subset of graphs with those specific number of nodes, from Suicide watch and baseline frontpage, lets call then $\Gamma_{SW}$ and $\Gamma_{BL}$. Let us assume that for a given value of $n$ , $\Gamma_{SW}$ has $K_{SW}$ graphs and $\Gamma_{BL}$ has $K_{BL}$ graphs. We then count for a given motif, number of occurrences in $\Gamma_{SW}$ and $\Gamma_{BL}$ where the graph had at-least one instance of that motif. Let us call the total number of graphs in $\Gamma_{BL}$ with a given motif as $\gamma_{BL}$ and $\gamma_{SW}$ likewise for the $\Gamma_{SW}$ graphs. 
 We then define the motif occurrence ratio as the fraction values for $\frac{\gamma_{BL}}{K_{BL}}$ and $\frac{\gamma_{SW}}{K_{SW}}$ for all the 16 motifs across all the chosen values of $n$. 
